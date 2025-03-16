@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Mode PWA Clock</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <!-- Link to the app icon (you need to provide an icon.png file) -->
+    <link rel="icon" href="icon.png" type="image/png">
+</head>
+<body>
+    <svg viewBox="0 0 400 400">
+        <!-- Background circle -->
+        <circle cx="200" cy="200" r="160" fill="none" stroke="#333" stroke-width="10"/>
+        <!-- Group for second arcs -->
+        <g id="second-arcs"></g>
+        <!-- Day of the week (above the clock) -->
+        <text x="200" y="160" text-anchor="middle" fill="#fff" font-family="Arial" font-size="20" opacity="0.4">
+            <tspan id="day-of-week"></tspan>
+        </text>
+        <!-- Digital clock text (hours, minutes, AM/PM) -->
+        <text x="200" y="220" text-anchor="middle" fill="#fff" font-family="Arial">
+            <tspan id="hours" font-size="60"></tspan>
+            <tspan font-size="60">:</tspan>
+            <tspan id="minutes" font-size="60"></tspan>
+            <tspan id="ampm" font-size="20" dx="5" opacity="0.4"></tspan>
+        </text>
+        <!-- Date (below the clock) -->
+        <text x="200" y="260" text-anchor="middle" fill="#fff" font-family="Arial" font-size="20" opacity="0.4">
+            <tspan id="date"></tspan>
+        </text>
+    </svg>
+    <script src="script.js"></script>
+</body>
+</html>
